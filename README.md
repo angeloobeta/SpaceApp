@@ -1,20 +1,37 @@
 # Operationalizea-Machine-Learning-Microservice-API
-This Project is all about Operationalizing a Machine Learning Microservice API;  using a pre-trained, sklearn model that has been trained to predict housing prices in Boston according to several features, such as 
-average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on.
+## Project Overview
+
+This project operationalize a Machine Learning Microservice API. 
+Using a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project operationalizes a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
 ---
-The are alot of files in cluded in this repository which are the app.py, .circleci/config.yml, 
-Makefile, make_prediction.sh, Makefile, requirements.txt, run_docker.sh, upload_docker.sh, 
-run_kubernetes.sh, output_txt_files directory and model_data directory
+T### Project Tasks
 
-app.py
-It contains the course code which will be deployed to a container and later on a kubernetes cluster
+Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
+* Test your project code using linting
+* Complete a Dockerfile to containerize this application
+* Deploy your containerized application using Docker and make a prediction
+* Improve the log statements in the source code for this application
+* Configure Kubernetes and create a Kubernetes cluster
+* Deploy a container using Kubernetes and make a prediction
+* Upload a complete Github repo with CircleCI to indicate that your code has been tested
 
-.circleci/config.yml, requirements.txt
-It contains the circleci configuration file for performing CI/CD on the codes;
 
+## Setup the Environment
 
-run_docker.sh, upload_docker.sh, make_prediction.sh, run_kubernetes.sh
-This files is for building the docker image, uploading the docker image to dockerhub, making prediction (make_prediction.sh) etc.
+* Create a virtualenv and activate it
+* Run `make install` to install the necessary dependencies
 
+### Running `app.py`
+
+1. Standalone:  `python app.py`
+2. Run in Docker:  `./run_docker.sh`
+3. Run in Kubernetes:  `./run_kubernetes.sh`
+
+### Kubernetes Steps
+
+* Setup and Configure Docker locally
+* Setup and Configure Kubernetes locally
+* Create Flask app in Container
+* Run via kubectl
 [![CircleCI](https://circleci.com/gh/angeloobeta/Operationalizea-Machine-Learning-Microservice-API.svg?style=svg)](https://circleci.com/gh/angeloobeta/Operationalizea-Machine-Learning-Microservice-API)
 # SpaceApp
